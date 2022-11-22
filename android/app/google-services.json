@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "510834595865",
+    "project_id": "rainyfairy2022",
+    "storage_bucket": "rainyfairy2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510834595865:android:a6632565d0716f532ff288",
+        "android_client_info": {
+          "package_name": "com.rainyfairy.hacku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510834595865-e5ujnia6hn958ta0t91p3pfnea6knvcv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rainyfairy.hacku",
+            "certificate_hash": "e8c1a7b3d899b2056fd2d22b5b81ae5299cd3dd3"
+          }
+        },
+        {
+          "client_id": "510834595865-l6fsvmmohpl4pnqjqduc7jum62r3fdbr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1Hw6yAp7NpDftjKlyPRvduJ71D8aowRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510834595865-l6fsvmmohpl4pnqjqduc7jum62r3fdbr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
