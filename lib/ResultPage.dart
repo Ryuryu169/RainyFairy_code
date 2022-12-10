@@ -37,16 +37,18 @@ class _ResultPageState extends State<ResultPage> {
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text('Result',style: TextStyle(fontSize: 50),),
-                              SizedBox(height: 50,),
-                              Text('Time',style: TextStyle(fontSize: 50),),
-                              Text('タイム',style: TextStyle(fontSize: 50),),//ここにタイムを表示
-                              SizedBox(height: 50,),
-                              Text('Score',style: TextStyle(fontSize: 50),),
-                              Text('スコア',style: TextStyle(fontSize: 50),)//ここにスコアを表示
-                            ],
-                          ),
+                            children: [
+                            ShaderMask(shaderCallback: (Rect rect) {return LinearGradient(colors: [HexColor('ffff00'),HexColor('ffd700'),HexColor('ffa500')]).createShader(rect);  },
+                               child: const Text('Result',style: TextStyle(color:Colors.white,fontSize: 50,fontFamily: 'Orbitron'))),
+                              const SizedBox(height: 50,),
+                              const Text('Time',style: TextStyle(color:Colors.black54,fontSize: 50,fontFamily: 'Orbitron')),
+                              Text('タイム',style: TextStyle(fontSize: 50)),//ここにタイムを表示
+                              const SizedBox(height: 50,),
+                              const Text('Score',style: TextStyle(color:Colors.black54,fontSize: 50,fontFamily: 'Orbitron')),
+                              //if(得点>最高得点)Row(mainAxisAlignment:MainAxisAlignment.center,children:  [SizedBox(width:200),Text('BestScore!',style: TextStyle(fontFamily:'Orbitron',fontSize:25,color: Colors.yellow[700]),)]),//最高得点で表示
+                              Text('スコア',style: TextStyle(fontSize: 50)),//ここにスコアを表示
+                            ]
+                          )
                         ),
                         SizedBox(//画面右のwidgetツリー
                           width: 600,
@@ -75,11 +77,11 @@ class _ResultPageState extends State<ResultPage> {
                                         SizedBox(
                                           width: 200,
                                           height: 35,
-                                          child: Text('ホーム画面に戻る',style: TextStyle(fontSize: 25,color: Colors.white),),
+                                          child: Text('ホーム画面に戻る',style: TextStyle(fontSize: 25,color: Colors.white,fontFamily: 'NotoSansJP')),
                                         )
-                                      ],
-                                    ),
-                                ),
+                                      ]
+                                    )
+                                )
                               ),
                               SizedBox(
                                 width: 200,
@@ -98,7 +100,7 @@ class _ResultPageState extends State<ResultPage> {
                                         width: 200,
                                         height: 35,
                                         child:Center(
-                                          child: Text('リトライ',style: TextStyle(fontSize: 25,color: Colors.white),),
+                                          child: Text('リトライ',style: TextStyle(fontSize: 25,color: Colors.white,fontFamily: 'NotoSansJP')),
                                         )
                                       )
                                     ]

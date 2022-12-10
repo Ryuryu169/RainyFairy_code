@@ -33,7 +33,7 @@ class _PlayingPageState extends State<PlayingPage> {
                             margin: const EdgeInsets.only(top: 30),
                             width: 1100,
                             height: 70,
-                            child:Text('制限時間:',style: TextStyle(fontSize: 40),),
+                            child:Text('制限時間:',style:const TextStyle(color:Colors.black87,fontSize: 40,fontFamily: 'NotoSansJP',fontWeight: FontWeight.w900)),
                           ),
                           Container(
                             margin: const EdgeInsets.only(top: 30),
@@ -42,10 +42,10 @@ class _PlayingPageState extends State<PlayingPage> {
                             child: ElevatedButton(//中止ボタン
                               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                               onPressed:(){},//中止の処理を追加
-                              child: const Text('中止',style: TextStyle(fontSize: 40)),
-                            ),
-                          ),
-                        ],
+                              child: const Text('中止',style: TextStyle(fontSize: 40,fontFamily: 'NotoSansJP',fontWeight: FontWeight.w900)),
+                            )
+                          )
+                        ]
                       ),
                       Column(
                         children: [
@@ -57,9 +57,9 @@ class _PlayingPageState extends State<PlayingPage> {
                             child: Center(
                               child: Text(
                                 '表示するテキスト',
-                                style: TextStyle(fontSize: 30),
-                              ),
-                            ),
+                                style: const TextStyle(color:Colors.black87,fontSize: 30),
+                              )
+                            )
                           ),
                           Container(//テキスト入力側
                             margin: const EdgeInsets.only(top: 50),
@@ -69,14 +69,14 @@ class _PlayingPageState extends State<PlayingPage> {
                             child: Center(
                               child: TextFormField(
                                 autofocus: true,//自動で入力状態にするやつ
-                                style: const TextStyle(fontSize: 30),
+                                style: const TextStyle(color:Colors.black87,fontSize: 30),
                                 decoration: const InputDecoration(//下線を非表示
                                   enabledBorder: InputBorder.none,
                                   focusedBorder: InputBorder.none,
                                 ),
                                 onChanged: (text){},//テキスト入力時の処理を追加
-                              ),
-                            ),
+                              )
+                            )
                           )
                         ]
                       )
