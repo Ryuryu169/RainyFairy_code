@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:bubble/bubble.dart';
 
-List data = ['順位　ユーザーネーム　スコア','順位　ユーザーネーム　スコア','順位　ユーザーネーム　スコア',];//ランキングのスコア
+List data = ['1　ユーザーネーム　スコア','2　ユーザーネーム　スコア','3　ユーザーネーム　スコア','4　ユーザーネーム　スコア','5　ユーザーネーム　スコア','6　ユーザーネーム　スコア','7　ユーザーネーム　スコア',];//ランキングのスコア
 Color textColor = Colors.black87;//テキストの色
 Color tileColor = Colors.white;//ランキングのタイルの色
 int needleScore = 100;//右上の必要なスコア
@@ -17,6 +17,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPage extends State<MainPage> {
+  var _count = 0;
   final _formKey=GlobalKey<FormState>();
 
   @override
@@ -46,7 +47,7 @@ class _MainPage extends State<MainPage> {
                 child: Row(
                   children: <Widget>[
                     Container(
-                      padding: EdgeInsetsDirectional.only(start: 35,end: 320,top: 65),
+                      padding: EdgeInsetsDirectional.only(start: 35,end: 20,top: 65),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
@@ -67,10 +68,17 @@ class _MainPage extends State<MainPage> {
                               height: 300,
                               width: 350,
                               child: ListView.builder(
-                                itemCount: data.length+1,
+                                itemCount: 7,
                                 itemBuilder: (context, index) {
-                                  if (index == data.length) {  // 最後のリストであることを確認したら、別の Widget を返す
-                                    return Icon(Icons.keyboard_arrow_down);
+                                  if (index == 6) {  // 最後のリストであることを確認したら、別の Widget を返す
+                                    return IconButton(
+                                      icon: Icon(Icons.keyboard_arrow_down),
+                                      onPressed: (){
+                                        setState(() {
+                                          _count++;
+                                        });
+                                      },
+                                    );
                                   }
                                   return Card(
                                     elevation: 0,
@@ -80,7 +88,7 @@ class _MainPage extends State<MainPage> {
                                     color: tileColor,
                                     child: ListTile(
                                       title: Text(
-                                        "順位　ユーザーネーム　スコア",
+                                        data[index+_count],
                                         style: TextStyle(
                                           fontSize: 18,
                                           fontFamily: 'NotoSansJP',
@@ -94,6 +102,11 @@ class _MainPage extends State<MainPage> {
                           ),
                         ],
                       ),
+                    ),
+                    Container(
+                        width: 300,
+                        height: 300,
+                        child: Image.asset('assets/images/egg.png')
                     ),
                     Container(
                       child: Column(
